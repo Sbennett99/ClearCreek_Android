@@ -19,7 +19,7 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="17dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:gravity="center_vertical"
@@ -29,7 +29,7 @@
             android:id="@+id/full_name_label"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="10dp"
             android:layout_weight="1"
             android:labelFor="@+id/full_name_value"
             android:text="@string/full_name_required_label"
@@ -69,7 +69,7 @@
             android:labelFor="@+id/email_value"
             android:text="@string/email_required_label"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-            tools:text="Email:" />
+            tools:text="Email id:" />
 
         <EditText
             android:id="@+id/email_value"
@@ -101,7 +101,7 @@
             android:labelFor="@+id/password_value"
             android:text="@string/username_required_label"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-            tools:text="Password:" />
+            tools:text="Password :" />
 
         <EditText
             android:id="@+id/password_value"
@@ -132,7 +132,7 @@
             android:labelFor="@+id/confirm_password_value"
             android:text="@string/confirm_required_label"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-            tools:text="Confirm Password:" />
+            tools:text="Confirm Password :" />
 
         <EditText
             android:id="@+id/confirm_password_value"

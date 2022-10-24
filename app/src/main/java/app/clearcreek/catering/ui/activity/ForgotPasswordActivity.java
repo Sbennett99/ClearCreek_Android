@@ -20,9 +20,8 @@ import app.clearcreek.catering.utils.StringUtils;
 import app.clearcreek.catering.utils.UiUtils;
 
 public class ForgotPasswordActivity extends AppCompatActivity {
-
     private ActivityForgotPasswordBinding binding;
-
+   
     private FirebaseAuth auth;
 
     @Override
@@ -38,7 +37,6 @@ public class ForgotPasswordActivity extends AppCompatActivity {
 
         binding.submitButton.setOnClickListener(v -> onSubmit());
     }
-
     @Override
     protected void onStart() {
         super.onStart();

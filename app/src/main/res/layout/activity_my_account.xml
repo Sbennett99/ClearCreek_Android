@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <com.google.android.material.button.MaterialButton
+    <com.google.android.material.button.MaterialButton
             android:id="@+id/sign_out_button"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="wrap_content"
@@ -21,7 +21,7 @@
             android:text="@string/sign_out_label"
             android:textColor="?attr/colorError" />
 
-        <com.google.android.material.card.MaterialCardView
+     <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
@@ -29,20 +29,20 @@
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
 
-            <androidx.appcompat.widget.LinearLayoutCompat
+     <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="16dp">
 
-                <com.google.android.material.imageview.ShapeableImageView
+      <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/image"
                     android:layout_width="108dp"
                     android:layout_height="108dp"
                     android:src="@drawable/ic_avatar"
                     app:shapeAppearance="@style/ShapeAppearanceOverlay.ClearCreekCatering.Round.Full" />
 
-                <androidx.appcompat.widget.LinearLayoutCompat
+      <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -155,7 +155,7 @@
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
-                <TextView
+                 <TextView
                     android:id="@+id/confirm_password_label"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -166,7 +166,7 @@
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
                     tools:text="Confirm Password:" />
 
-                <EditText
+                 <EditText
                     android:id="@+id/confirm_password_value"
                     style="@style/Widget.EditText"
                     android:layout_width="0dp"
