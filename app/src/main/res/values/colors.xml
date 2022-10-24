@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_200">#F9E6E0</color>
+    <color name="primary_500">#EDA073</color>
+    <color name="primary_700">#DB6400</color>
+    <color name="secondary_500">#EDA073</color>
+    <color name="secondary_700">#DB6400</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="colorDivider">#14212121</color>
+    <color name="colorOutline">#1F000000</color>
+
+    <color name="colorTranslucent">#4D000000</color>
+</resources>

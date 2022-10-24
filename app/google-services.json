@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "817894082682",
+    "project_id": "clear-creek-catering-43d37",
+    "storage_bucket": "clear-creek-catering-43d37.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:817894082682:android:f95082548d59e4f47d93c3",
+        "android_client_info": {
+          "package_name": "app.clearcreek.catering"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "817894082682-rl00mit75hhlviouk9gp03cjhik9svs7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.clearcreek.catering",
+            "certificate_hash": "fb6f0bcf54e4de5115043627d35adc5157a17116"
+          }
+        },
+        {
+          "client_id": "817894082682-3lrlnug85asj473t9dm96iagft7vkiut.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAENYtiMEa3U74-RwHOYczmBQJMiexQpMg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "817894082682-3lrlnug85asj473t9dm96iagft7vkiut.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

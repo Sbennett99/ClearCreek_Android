@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="app.clearcreek.catering">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <queries>
+        <package android:name="com.google.android.apps.maps" />
+    </queries>
+
+    <application
+        android:name=".AppController"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ClearCreekCatering"
+        tools:ignore="DataExtractionRules"
+        tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAP_API_KEY}" />
+
+        <activity
+            android:name=".ui.activity.StartActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ClearCreekCatering.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:theme="@style/Theme.ClearCreekCatering.NoActionBar" />
+        <activity
+            android:name=".ui.activity.RegisterActivity"
+            android:theme="@style/Theme.ClearCreekCatering.NoActionBar" />
+        <activity
+            android:name=".ui.activity.ForgotPasswordActivity"
+            android:theme="@style/Theme.ClearCreekCatering.NoActionBar" />
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ClearCreekCatering.NoActionBar" />
+        <activity android:name=".ui.activity.ProductDetailsActivity" />
+        <activity
+            android:name=".ui.activity.PaymentMethodActivity"
+            android:label="@string/payment_method_label" />
+        <activity
+            android:name=".ui.activity.AddCardActivity"
+            android:label="@string/add_new_card_label" />
+        <activity
+            android:name=".ui.activity.OrderSummaryActivity"
+            android:label="@string/order_summary_label" />
+        <activity
+            android:name=".ui.activity.MyAccountActivity"
+            android:theme="@style/Theme.ClearCreekCatering.NoActionBar" />
+        <activity
+            android:name=".ui.activity.SearchActivity"
+            android:theme="@style/Theme.ClearCreekCatering.NoActionBar" />
+    </application>
+
+</manifest>

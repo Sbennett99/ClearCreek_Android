@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">Clear Creek Catering</string>
+
+    <string name="drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="drawer_close" translatable="false">Close navigation drawer</string>
+
+    <string name="login_label">Login</string>
+    <string name="sign_up_label">Sign Up</string>
+    <string name="username_required_label"><![CDATA[Login<font color="RED">*</font>:]]></string>
+    <string name="password_required_label"><![CDATA[Password<font color="RED">*</font>:]]></string>
+    <string name="old_password_required_label"><![CDATA[Old Password<font color="RED">*</font>:]]></string>
+    <string name="confirm_required_label"><![CDATA[Confirm Password<font color="RED">*</font>:]]></string>
+    <string name="email_required_label"><![CDATA[Email<font color="RED">*</font>:]]></string>
+    <string name="full_name_required_label"><![CDATA[Full Name<font color="RED">*</font>:]]></string>
+    <string name="cardholder_required_label"><![CDATA[Card Holder Name<font color="RED">*</font>:]]></string>
+    <string name="card_required_label"><![CDATA[Card Number<font color="RED">*</font>:]]></string>
+    <string name="cvv_required_label"><![CDATA[CVV<font color="RED">*</font>:]]></string>
+    <string name="expiry_required_label"><![CDATA[Expiry<font color="RED">*</font>:]]></string>
+    <string name="submit_label">Submit</string>
+    <string name="home_label">Home</string>
+    <string name="about_us_label">About Us</string>
+    <string name="contact_us_label">Contact Us</string>
+    <string name="menew_label">Menew</string>
+    <string name="locations_label">Locations</string>
+    <string name="cart_label">Cart</string>
+    <string name="search_label">Search</string>
+    <string name="next_label">Next</string>
+    <string name="address_label">Address:</string>
+    <string name="add_to_cart">Add To Cart</string>
+    <string name="tax_label">Tax:</string>
+    <string name="total_price">Total Price:</string>
+    <string name="check_out_label">Checkout</string>
+    <string name="debit_label">Debit</string>
+    <string name="credit_label">Credit</string>
+    <string name="cash_label">Cash</string>
+    <string name="pay_now_label">Pay Now</string>
+    <string name="add_new_card_label">Add New Card</string>
+    <string name="payment_method_label">Payment Method</string>
+    <string name="add_card_label">Add Card</string>
+    <string name="order_summary_label">Order Summary</string>
+    <string name="order_confirmed_label">Order Confirmed</string>
+    <string name="order_number_label">Order Number: %1$s</string>
+    <string name="order_details_label">Order Details:</string>
+    <string name="thank_you_label">Thank You!</string>
+    <string name="my_account_label">My Account</string>
+    <string name="update_password_label">Update Password</string>
+    <string name="update_label">Update</string>
+    <string name="search_address_label">Search Address</string>
+    <string name="email_error_message">Invalid email address.</string>
+    <string name="full_name_error_message">Invalid full name.</string>
+    <string name="password_error_message">Password must be at least 8 characters long.</string>
+    <string name="confirm_password_error_message">Confirm Password does not match password.</string>
+    <string name="old_password_error_message">Invalid old password.</string>
+    <string name="loading_message">Loading Message</string>
+    <string name="authentication_error_message">Authentication error.</string>
+    <string name="password_updated_message">Password updated successfully.</string>
+    <string name="sign_out_label">Sign Out</string>
+    <string name="no_items_message">No items found.</string>
+    <string name="select_topping_message">Select a topping</string>
+    <string name="select_variant_message">Select a variant</string>
+    <string name="select_topping_error_message">Please select a topping.</string>
+    <string name="select_variant_error_message">Please select a variant.</string>
+    <string name="product_instructions_hint">Product instructions</string>
+    <string name="label_minus">-</string>
+    <string name="label_plus">+</string>
+    <string name="add_to_cart_success">Added to cart</string>
+    <string name="guest_label">Continue as Guest</string>
+    <string name="forgot_password_label">Forgot Password?</string>
+    <string name="reset_password_email_message">Reset password email sent successfully.</string>
+</resources>
