@@ -20,9 +20,7 @@ import app.clearcreek.catering.listeners.OnItemClickListener;
 import app.clearcreek.catering.utils.StringUtils;
 
 public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHolder> {
-
     private final List<Order> list;
-
     private OnItemClickListener<Order> listener;
 
     public HistoryAdapter() {
