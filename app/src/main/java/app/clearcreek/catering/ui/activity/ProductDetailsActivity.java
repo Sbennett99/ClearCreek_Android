@@ -5,17 +5,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.squareup.picasso.Picasso;
-
 import java.util.List;
 import java.util.Objects;
-
 import app.clearcreek.catering.AppController;
 import app.clearcreek.catering.R;
 import app.clearcreek.catering.data.model.Cart;
@@ -31,10 +27,8 @@ public class ProductDetailsActivity extends AppCompatActivity {
     public static final String EXTRA_IS_FROM_SEARCH = "is_from_search";
 
     private ActivityProductDetailsBinding binding;
-
     private boolean isToppingSelectionRequired = false;
     private boolean isVariantSelectionRequired = false;
-
     private String selectedTopping = null;
     private ProductVariant selectedVariant = null;
     private boolean isFromSearch;
