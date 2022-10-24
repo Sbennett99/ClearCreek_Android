@@ -21,6 +21,7 @@ import app.clearcreek.catering.utils.UiUtils;
 
 public class ForgotPasswordActivity extends AppCompatActivity {
     private ActivityForgotPasswordBinding binding;
+   
     private FirebaseAuth auth;
 
     @Override
