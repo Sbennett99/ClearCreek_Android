@@ -51,14 +51,14 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-                        tools:text="Product Name" />
+                        tools:text="Product-Name" />
 
                     <TextView
                         android:id="@+id/product_description"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
-                        tools:text="Product Description" />
+                        tools:text="Product-Description" />
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -78,7 +78,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="17dp"
                 android:orientation="vertical"
                 android:visibility="gone"
                 tools:visibility="visible">
@@ -129,7 +129,7 @@
                 android:gravity="top|start"
                 android:hint="@string/product_instructions_hint"
                 android:inputType="textMultiLine"
-                android:maxLength="256"
+                android:maxLength="255"
                 android:maxLines="7"
                 android:minLines="3" />
         </androidx.appcompat.widget.LinearLayoutCompat>
