@@ -17,7 +17,6 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-
 import app.clearcreek.catering.AppController;
 import app.clearcreek.catering.R;
 import app.clearcreek.catering.data.model.Cart;
