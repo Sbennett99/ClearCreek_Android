@@ -21,27 +21,25 @@ import app.clearcreek.catering.ui.activity.PaymentMethodActivity;
 import app.clearcreek.catering.ui.adapter.CartAdapter;
 import app.clearcreek.catering.utils.StringUtils;
 
-public class CartFragment extends Fragment {
 
+
+
+
+
+public class CartFragment extends Fragment {
     private FragmentCartBinding binding;
     private CartAdapter adapter;
-
     private Cart cart;
-
     public CartFragment() {
         super(R.layout.fragment_cart);
     }
-
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         binding = FragmentCartBinding.bind(view);
-
         cart = AppController.getPreferencesHelper().getCart();
-
         LinearLayoutManager layoutManager = new LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false);
         binding.list.setLayoutManager(layoutManager);
-
         adapter = new CartAdapter(cart.getProducts());
         adapter.setOnCartUpdateListener(new CartAdapter.OnCartUpdateListener() {
             @Override
@@ -50,7 +48,6 @@ public class CartFragment extends Fragment {
                 AppController.getPreferencesHelper().saveCart(cart);
                 updateLayout();
             }
-
             @Override
             public void onItemRemoved(int position) {
                 cart.calculate();
@@ -62,12 +59,9 @@ public class CartFragment extends Fragment {
                 }
             }
         });
-
         binding.list.setAdapter(adapter);
-
         cart.calculate();
         updateLayout();
-
         binding.checkOutButton.setOnClickListener(v -> {
             FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
             if (currentUser != null && currentUser.isAnonymous()) {
@@ -80,12 +74,10 @@ public class CartFragment extends Fragment {
             }
         });
     }
-
     private void updateLayout() {
         if (!cart.getProducts().isEmpty()) {
             binding.tax.setText(StringUtils.formatCurrency(cart.getTaxAmount()));
             binding.total.setText(StringUtils.formatCurrency(cart.getTotalAmount()));
-
             binding.list.setVisibility(View.VISIBLE);
             binding.totalsLayout.setVisibility(View.VISIBLE);
             binding.empty.setVisibility(View.GONE);
