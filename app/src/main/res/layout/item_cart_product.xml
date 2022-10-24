@@ -8,12 +8,10 @@
     android:layout_margin="8dp"
     app:cardCornerRadius="8dp"
     app:cardElevation="8dp">
-
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/product_image"
             android:layout_width="108dp"
@@ -21,7 +19,6 @@
             android:scaleType="centerCrop"
             app:shapeAppearance="@style/ShapeAppearanceOverlay.ClearCreekCatering.Round"
             tools:src="@drawable/slide_1" />
-
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -39,7 +36,6 @@
                 android:singleLine="true"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
                 tools:text="Product Name" />
-
             <TextView
                 android:id="@+id/product_description"
                 android:layout_width="wrap_content"
@@ -50,7 +46,6 @@
                 android:singleLine="true"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
                 tools:text="Product Description" />
-
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -84,7 +79,7 @@
                     android:src="@drawable/ic_plus"
                     app:cornerRadius="20dp" />
 
-            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <TextView
@@ -97,5 +92,4 @@
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
             tools:text="$ 13.99" />
     </androidx.appcompat.widget.LinearLayoutCompat>
-
 </com.google.android.material.card.MaterialCardView>
