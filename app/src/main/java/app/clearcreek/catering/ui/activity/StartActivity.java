@@ -1,21 +1,29 @@
 package app.clearcreek.catering.ui.activity;
 
 import android.content.Intent;
+
 import android.os.Bundle;
 import android.util.Log;
+
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
+
+
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-
 import java.util.HashMap;
-import java.util.Map;
 
+
+
+import java.util.Map;
 import app.clearcreek.catering.AppController;
 import app.clearcreek.catering.R;
+
+
+
 import app.clearcreek.catering.databinding.ActivityStartBinding;
 
 public class StartActivity extends AppCompatActivity implements View.OnClickListener {
@@ -27,12 +35,16 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         binding = ActivityStartBinding.inflate(getLayoutInflater());
+
         setContentView(binding.getRoot());
+        
 
         auth = FirebaseAuth.getInstance();
 
         binding.loginButton.setOnClickListener(this);
+
         binding.registerButton.setOnClickListener(this);
     }
 
