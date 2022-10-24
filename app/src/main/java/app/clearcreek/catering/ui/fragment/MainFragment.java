@@ -17,6 +17,7 @@ import app.clearcreek.catering.R;
 import app.clearcreek.catering.data.model.Cart;
 import app.clearcreek.catering.databinding.FragmentMainBinding;
 
+
 public class MainFragment extends Fragment implements NavigationBarView.OnItemSelectedListener {
 
     private FragmentMainBinding binding;
