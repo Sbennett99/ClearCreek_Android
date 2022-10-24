@@ -6,7 +6,6 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.MenuItem;
 import android.view.View;
-
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
@@ -15,10 +14,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
-
 import java.util.ArrayList;
 import java.util.Objects;
-
 import app.clearcreek.catering.data.model.ProductItem;
 import app.clearcreek.catering.databinding.ActivitySearchBinding;
 import app.clearcreek.catering.ui.adapter.SearchProductAdapter;
@@ -42,10 +39,8 @@ public class SearchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivitySearchBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
         setSupportActionBar(binding.toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-
         ArrayList<ProductItem> productItems = getIntent().getParcelableArrayListExtra("products");
         adapter = new SearchProductAdapter();
         adapter.setOnAdapterDatasetChangedListener(size -> {

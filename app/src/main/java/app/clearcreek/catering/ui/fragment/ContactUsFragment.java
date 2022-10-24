@@ -18,6 +18,7 @@ public class ContactUsFragment extends Fragment {
     public ContactUsFragment() {
         super(R.layout.fragment_contact_us);
     }
+    
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
