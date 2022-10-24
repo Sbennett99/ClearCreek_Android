@@ -31,12 +31,10 @@ public class OrderSummaryAdapter extends RecyclerView.Adapter<OrderSummaryAdapte
         );
         return new ViewHolder(binding);
     }
-
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.onBind(position);
     }
-
     @Override
     public int getItemCount() {
         return list.size();
