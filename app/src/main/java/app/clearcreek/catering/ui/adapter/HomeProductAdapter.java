@@ -19,14 +19,11 @@ import app.clearcreek.catering.databinding.ItemProductBinding;
 import app.clearcreek.catering.databinding.ItemProductCategoryBinding;
 
 public class HomeProductAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-
     private final List<ProductItem> list;
     private int selectedPosition = -1;
-
     public HomeProductAdapter() {
         list = new ArrayList<>();
     }
-
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

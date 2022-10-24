@@ -12,10 +12,8 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
 import app.clearcreek.catering.AppController;
 import app.clearcreek.catering.R;
 import app.clearcreek.catering.databinding.ActivityLoginBinding;

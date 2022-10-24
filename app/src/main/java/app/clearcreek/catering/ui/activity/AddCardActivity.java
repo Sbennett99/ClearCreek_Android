@@ -25,9 +25,7 @@ import app.clearcreek.catering.databinding.ActivityAddCardBinding;
 import app.clearcreek.catering.utils.StringUtils;
 
 public class AddCardActivity extends AppCompatActivity {
-
     public static final String EXTRA_CART = "cart";
-
     private ActivityAddCardBinding binding;
 
     @Override

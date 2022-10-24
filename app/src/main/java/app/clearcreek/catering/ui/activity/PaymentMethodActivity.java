@@ -24,9 +24,7 @@ import app.clearcreek.catering.data.model.PaymentMethod;
 import app.clearcreek.catering.databinding.ActivityPaymentMethodBinding;
 
 public class PaymentMethodActivity extends AppCompatActivity implements View.OnClickListener {
-
     public static final String EXTRA_CART = "cart";
-
     private ActivityPaymentMethodBinding binding;
     private Cart cart;
 
@@ -35,7 +33,6 @@ public class PaymentMethodActivity extends AppCompatActivity implements View.OnC
         super.onCreate(savedInstanceState);
         binding = ActivityPaymentMethodBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         cart = getIntent().getParcelableExtra(EXTRA_CART);
 
