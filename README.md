@@ -5,7 +5,7 @@
 
 ### Front End
 - #### Team members
-  1. Kumar Ganga
+  1. Shiva Kumar Ganga
   2. Pranay Bakaram
   3. Vishal Dubbaka
   4. Sai Kaushik Beeram
