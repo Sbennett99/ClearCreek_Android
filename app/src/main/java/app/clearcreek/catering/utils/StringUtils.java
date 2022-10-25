@@ -7,6 +7,8 @@ import androidx.core.text.HtmlCompat;
 import java.text.NumberFormat;
 import java.util.Locale;
 
+//written by ajay vemula
+//Commited by ajay
 public class StringUtils {
     public static Spanned parseHtml(String htmlString) {
         return HtmlCompat.fromHtml(htmlString, HtmlCompat.FROM_HTML_MODE_COMPACT);

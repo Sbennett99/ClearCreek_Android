@@ -7,6 +7,8 @@ import com.google.firebase.firestore.FirebaseFirestoreSettings;
 
 import app.clearcreek.catering.data.prefs.PreferencesHelper;
 
+//Written by ajay kumar vemula
+//Commited by ajay kumar vemula
 public class AppController extends Application {
 
     private PreferencesHelper preferencesHelper;

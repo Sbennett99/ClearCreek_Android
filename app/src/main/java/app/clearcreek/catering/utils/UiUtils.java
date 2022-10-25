@@ -5,6 +5,8 @@ import android.content.Context;
 
 import androidx.annotation.StringRes;
 
+//Writte by ajay kumar vemula
+//comited by ajay kumar vemula
 public class UiUtils {
     public static ProgressDialog getProgress(Context context, @StringRes int resource) {
         return getProgress(context, context.getString(resource));
