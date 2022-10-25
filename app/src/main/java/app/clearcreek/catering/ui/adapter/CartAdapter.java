@@ -1,22 +1,23 @@
 package app.clearcreek.catering.ui.adapter;
 
 import android.view.LayoutInflater;
+
 import android.view.ViewGroup;
-
 import androidx.annotation.NonNull;
+
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.squareup.picasso.Picasso;
-
 import java.util.List;
+import app.clearcreek.catering.data.model.CartProduct;2
 
-import app.clearcreek.catering.data.model.CartProduct;
 import app.clearcreek.catering.databinding.ItemCartProductBinding;
+
 import app.clearcreek.catering.utils.StringUtils;
 
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
 
     private final List<CartProduct> list;
+
     private OnCartUpdateListener listener;
 
     public CartAdapter(List<CartProduct> products) {
@@ -59,34 +60,45 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
 
         void onBind(int position) {
             CartProduct product = list.get(position);
+
             binding.productImage.setContentDescription(product.getName());
+
             binding.productName.setText(product.getName());
 
             binding.productDescription.setText(product.getDescription());
+
             binding.productDescription.setSelected(true);
 
             binding.quantity.setText(String.valueOf(product.getQuantity()));
-
             binding.productPrice.setText(StringUtils.formatCurrency(product.getPrice()));
+
             Picasso.get().load(product.getImage()).into(binding.productImage);
 
             binding.minusButton.setOnClickListener(v -> {
                 if (product.getQuantity() == 1) {
                     list.remove(position);
+
                     notifyItemRemoved(position);
+
                     listener.onItemRemoved(position);
                 } else {
                     int qty = product.getQuantity();
+
                     product.setQuantity(--qty);
+
                     notifyItemChanged(position);
+
                     listener.onQuantityUpdated(qty, position);
                 }
             });
 
             binding.plusButton.setOnClickListener(v -> {
                 int qty = product.getQuantity();
+
                 product.setQuantity(++qty);
+
                 notifyItemChanged(position);
+                
                 listener.onQuantityUpdated(qty, position);
             });
         }

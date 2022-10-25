@@ -21,7 +21,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Queue;
-
 import app.clearcreek.catering.AppController;
 import app.clearcreek.catering.R;
 import app.clearcreek.catering.data.model.Product;

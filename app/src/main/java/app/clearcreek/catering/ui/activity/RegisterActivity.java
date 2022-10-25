@@ -6,17 +6,14 @@ import android.os.Bundle;
 import android.text.Spanned;
 import android.util.Patterns;
 import android.widget.Toast;
-
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
-
 import app.clearcreek.catering.R;
 import app.clearcreek.catering.databinding.ActivityRegisterBinding;
 import app.clearcreek.catering.utils.StringUtils;
@@ -25,9 +22,7 @@ import app.clearcreek.catering.utils.UiUtils;
 public class RegisterActivity extends AppCompatActivity {
 
     private ActivityRegisterBinding binding;
-
     private FirebaseAuth auth;
-
     private ProgressDialog progressDialog;
 
     @Override
@@ -39,19 +34,14 @@ public class RegisterActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
 
         progressDialog = UiUtils.getProgress(this, R.string.loading_message);
-
         Spanned fullNameLabel = StringUtils.parseHtml(getString(R.string.full_name_required_label));
         binding.fullNameLabel.setText(fullNameLabel);
-
         Spanned emailLabel = StringUtils.parseHtml(getString(R.string.email_required_label));
         binding.emailLabel.setText(emailLabel);
-
         Spanned passwordLabel = StringUtils.parseHtml(getString(R.string.password_required_label));
         binding.passwordLabel.setText(passwordLabel);
-
         Spanned confirmPasswordLabel = StringUtils.parseHtml(getString(R.string.confirm_required_label));
         binding.confirmPasswordLabel.setText(confirmPasswordLabel);
-
         binding.submitButton.setOnClickListener(v -> onSubmit());
     }
 

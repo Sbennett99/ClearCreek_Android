@@ -19,8 +19,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="16dp"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="8dp">
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp">
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/map"
@@ -51,6 +51,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
-            tools:text="House No, Khursheed Market, St#30, 66 Street No 25, F-10/1 F 10/1 F-10, Islamabad, Islamabad Capital Territory 44000, Pakistan" />
+            tools:text="1771 W Broadway Ave, Maryville, TN 37801, USA" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 </RelativeLayout>

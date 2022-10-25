@@ -21,10 +21,8 @@ import app.clearcreek.catering.listeners.OnItemClickListener;
 import app.clearcreek.catering.utils.StringUtils;
 
 public class SearchProductAdapter extends RecyclerView.Adapter<SearchProductAdapter.ItemViewHolder> implements Filterable {
-
     private final List<ProductItem> list;
     private final List<ProductItem> filterList;
-
     private OnItemClickListener<ProductItem> listener;
     private OnAdapterDatasetChangedListener datasetChangedListener;
 
