@@ -62,7 +62,17 @@ public class ForgotPasswordActivity extends AppCompatActivity {
         ProgressDialog progressDialog = UiUtils.getProgress(this, R.string.loading_message);
         progressDialog.show();
 
-       
+        auth.sendPasswordResetEmail(email)
+                .addOnCompleteListener(this, task -> {
+                    if (task.isSuccessful()) {
+                        progressDialog.dismiss();
+                        showToast(R.string.reset_password_email_message);
+                        finish();
+                    } else {
+                        progressDialog.dismiss();
+                        showToast(R.string.authentication_error_message);
+                    }
+                });
     }
 
     private void showToast(@StringRes int resource) {
