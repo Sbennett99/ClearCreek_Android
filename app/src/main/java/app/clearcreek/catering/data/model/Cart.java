@@ -9,18 +9,33 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+/*
+ * Custom Java Class
+ *
+ * Allows creation of a java object
+ * to keep track of the customers current
+ * cart and all information associated with
+ * it such as the cost and tax totals
+ * as well as the decided upon payment method
+ * the customer plans to use
+ *
+ */
+
 public class Cart implements Parcelable {
+    // A list containing all items to be ordered by the customer
     private final List<CartProduct> products;
 
     private double taxAmount = 0.0;
     private double totalAmount = 0.0;
     private PaymentMethod paymentMethod;
 
+    // Basic empty Constructor
     public Cart() {
         products = new ArrayList<>();
         paymentMethod = PaymentMethod.CASH;
     }
 
+    // Constructor to create a cart object from an input Parcel(Serializable object)
     protected Cart(Parcel in) {
         products = in.createTypedArrayList(CartProduct.CREATOR);
         taxAmount = in.readDouble();
@@ -28,6 +43,7 @@ public class Cart implements Parcelable {
         paymentMethod = PaymentMethod.values()[in.readInt()];
     }
 
+    // Creation/changing Cart parcel objects using the class itself
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeTypedList(products);
@@ -41,6 +57,7 @@ public class Cart implements Parcelable {
         return 0;
     }
 
+    // Getters/Setters and a few other functions for object creation
     public static final Creator<Cart> CREATOR = new Creator<Cart>() {
         @Override
         public Cart createFromParcel(Parcel in) {
@@ -78,6 +95,7 @@ public class Cart implements Parcelable {
         return paymentMethod;
     }
 
+    // Basic tax and total calculations
     public void calculate() {
         double subTotal = 0.0;
         for (CartProduct product : products) {
@@ -88,7 +106,7 @@ public class Cart implements Parcelable {
         taxAmount = (taxPercent * subTotal) / 100;
         totalAmount = subTotal + taxAmount;
     }
-
+    // creates a map object using the cart object
     public Map<String, Object> toMap() {
         Map<String, Object> map = new HashMap<>();
         map.put("payment_method_id", paymentMethod.getId());
