@@ -73,7 +73,29 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(@NonNull Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
 
+        MenuItem myAccountMenu = menu.findItem(R.id.action_my_account);
+        if (myAccountMenu != null) {
+            View view = myAccountMenu.getActionView();
+            if (view != null) {
+                view.setOnClickListener(v -> {
+                    FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+                    if(currentUser != null && currentUser.isAnonymous()){
+                        Intent intent = new Intent(this, LoginActivity.class);
+                        startActivity(intent);
+                    } else {
+                        Intent intent = new Intent(this, MyAccountActivity.class);
+                        startActivity(intent);
+                    }
+                });
+            }
+        }
+
+        return super.onCreateOptionsMenu(menu);
+    }
 
 
     @Override
