@@ -4,6 +4,9 @@ import com.google.firebase.firestore.DocumentReference;
 
 import java.util.Map;
 
+//written by Rahul Konda
+//Comitted by Rahul Konda
+
 public class ProductOffer {
     private String name;
     private String image;

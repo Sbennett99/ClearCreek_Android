@@ -3,6 +3,9 @@ package app.clearcreek.catering.data.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+//written by Rahul Konda
+//Comitted by Rahul Konda
+
 public class ProductItem implements Parcelable {
     private final String id;
     private final String name;

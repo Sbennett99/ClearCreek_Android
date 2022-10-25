@@ -5,6 +5,9 @@ import android.os.Parcelable;
 
 import java.util.Map;
 
+//written by Rahul Konda
+//Comitted by Rahul Konda
+
 public class ProductVariant implements Parcelable {
     private String name;
     private double price;
