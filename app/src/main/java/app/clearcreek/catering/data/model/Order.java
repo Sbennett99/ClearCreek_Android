@@ -12,6 +12,17 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
+/*
+ * Custom Java Class
+ *
+ * Allows creation of a java object
+ * after the order is confirmed so it
+ * may be sent to the Restaurant for fulfillment
+ *
+ */
+
+
+
 public class Order implements Parcelable {
     private final List<CartProduct> products;
 
@@ -20,12 +31,15 @@ public class Order implements Parcelable {
     private PaymentMethod paymentMethod;
     private String orderNumber;
 
+    // basic empty constructor
     public Order() {
         products = new ArrayList<>();
         paymentMethod = PaymentMethod.CASH;
         orderNumber = "";
     }
 
+    // Constructor to create an order from a parcelable object
+    // this may be brought in from the database, or locally from the CartProduct class
     protected Order(Parcel in) {
         products = in.createTypedArrayList(CartProduct.CREATOR);
         taxAmount = in.readDouble();
@@ -34,6 +48,8 @@ public class Order implements Parcelable {
         orderNumber = in.readString();
     }
 
+
+    // Parcel creation
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeTypedList(products);
@@ -47,7 +63,7 @@ public class Order implements Parcelable {
     public int describeContents() {
         return 0;
     }
-
+    // Getters/Setters and a few other functions for object creation
     public static final Creator<Order> CREATOR = new Creator<Order>() {
         @Override
         public Order createFromParcel(Parcel in) {
@@ -136,6 +152,7 @@ public class Order implements Parcelable {
         return map;
     }
 
+    // Create Order object from the database document
     public static Order createFromDocument(DocumentSnapshot document) {
         try {
             long paymentMethodId = Long.parseLong(String.valueOf(document.get("payment_method_id")));
