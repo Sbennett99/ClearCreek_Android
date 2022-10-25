@@ -63,28 +63,7 @@ public class MyAccountActivity extends AppCompatActivity {
         binding.signOutButton.setOnClickListener(v -> onSignOut());
     }
 
-    private void onUpdatePassword() {
-        String currentPassword = binding.oldPasswordValue.getText().toString().trim();
-        String newPassword = binding.passwordValue.getText().toString().trim();
-        String confirmPassword = binding.confirmPasswordValue.getText().toString().trim();
-
-        if (currentPassword.length() < 8) {
-            showToast(R.string.old_password_error_message);
-            return;
-        }
-
-        if (newPassword.length() < 8) {
-            showToast(R.string.password_error_message);
-            return;
-        }
-
-        if (!confirmPassword.equals(newPassword)) {
-            showToast(R.string.confirm_password_error_message);
-            return;
-        }
-
-        updatePassword(currentPassword, newPassword);
-    }
+   
 
     private void updatePassword(String currentPassword, String newPassword) {
         progressDialog.show();
