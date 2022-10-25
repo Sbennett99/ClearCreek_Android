@@ -1,5 +1,11 @@
 package app.clearcreek.catering.data.model;
 
+/*
+ * Custom Java Enum
+ * This is to keep track
+ * of the customers Specified Payment method
+ *
+ */
 public enum PaymentMethod {
     CASH(1, "Cash"),
     CREDIT(2, "Credit"),
