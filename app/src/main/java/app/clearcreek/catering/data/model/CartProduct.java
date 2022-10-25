@@ -6,6 +6,18 @@ import android.os.Parcelable;
 import java.util.HashMap;
 import java.util.Map;
 
+
+/*
+ * Custom Java Class
+ *
+ * Allows creation of a java object
+ * for each item that the restaurant
+ * has available on their menu
+ *
+ *
+ */
+
+
 public class CartProduct implements Parcelable {
     private String id;
     private String path;
@@ -19,7 +31,11 @@ public class CartProduct implements Parcelable {
     private String comments;
     private int quantity;
 
+
+    // Constructor used for item creation within the application itself
     public CartProduct(String id, String path, String name, String image, double price, String variant, String toppings, String sauce, String bread, String comments) {
+
+        // Basic features that every item has, items that don't have specific fields leave them blank
         this.id = id;
         this.path = path;
         this.name = name;
@@ -32,7 +48,7 @@ public class CartProduct implements Parcelable {
         this.comments = comments;
         this.quantity = 1;
     }
-
+    // Constructor used for item creation from a Parcel Object -- This object is brought in from the database
     protected CartProduct(Parcel in) {
         id = in.readString();
         path = in.readString();
@@ -46,7 +62,7 @@ public class CartProduct implements Parcelable {
         comments = in.readString();
         quantity = in.readInt();
     }
-
+    // Creation/changing parcel objects using the class itself
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(id);
@@ -66,7 +82,7 @@ public class CartProduct implements Parcelable {
     public int describeContents() {
         return 0;
     }
-
+    // Getters/Setters and a few other functions for object creation
     public static final Creator<CartProduct> CREATOR = new Creator<CartProduct>() {
         @Override
         public CartProduct createFromParcel(Parcel in) {
@@ -136,7 +152,7 @@ public class CartProduct implements Parcelable {
 
         return description;
     }
-
+    // creates a map object using the cart product object
     public Map<String, Object> toMap() {
         Map<String, Object> map = new HashMap<>();
         map.put("id", id);
