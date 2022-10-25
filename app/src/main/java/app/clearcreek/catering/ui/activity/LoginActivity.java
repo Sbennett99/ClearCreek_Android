@@ -41,21 +41,7 @@ public class LoginActivity extends AppCompatActivity {
         binding.passwordLabel.setText(passwordLabel);
 
         FirebaseUser currentUser = auth.getCurrentUser();
-        if (currentUser != null && currentUser.isAnonymous()) {
-            binding.guestButton.setVisibility(View.GONE);
-            binding.signupButton.setVisibility(View.VISIBLE);
-        }
 
-        binding.submitButton.setOnClickListener(v -> onSubmit());
-        binding.guestButton.setOnClickListener(v -> onGuest());
-        binding.signupButton.setOnClickListener(v -> {
-            Intent intent = new Intent(this, RegisterActivity.class);
-            startActivity(intent);
-        });
-        binding.forgotPasswordLink.setOnClickListener(v -> {
-            Intent intent = new Intent(this, ForgotPasswordActivity.class);
-            startActivity(intent);
-        });
     }
 
     @Override
