@@ -1,5 +1,6 @@
 # Clear Creek Android Ordering Application
 - #### Team Name: The 11
+Team Lead: Seth Bennett
 ## Summary
  Setting off on this project we realized that for most of us, this would be the last big thing we worked on to complete our Degrees. With that came the feeling of responsibility to show what we have learned during our time in college. Within this repo you will find the hard work of all 11 of our team's members and hopefully a very useful application.
 
